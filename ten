@@ -1,1 +1,19 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+    return 1.0 - float(sin(x));
+}
+int main()
+{
+    int n,a,b;
+    float h;
+    cin>>n>>a>>b;
+    
+float Sin(int x){
+h=float(b-a)/float(n);
+    for(float i=float(a);i<=b;i+=h){
+        cout<<Sin(i)<<" ";
+    }
+}
 
