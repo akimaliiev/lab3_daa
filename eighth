@@ -1,0 +1,65 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int CalculateDenominator(int n)
+{
+    int result = 1;
+    for(int i = 1; i <= n; i++)
+    {
+        result *= (2 * i);
+    }
+
+    // result *= (2 * n + 1);
+
+    cout << "1: " << result << endl;
+
+    return result;
+}
+
+int CalculateCoefficientX(int n)
+{
+    int result = 1;
+
+    for (int i = 1; i <= n; i++)
+    {
+        result *= (2 * i - 3);
+    }
+
+    cout << "2: " << result << endl;
+
+    return result;
+}
+
+int main()
+{
+    double x;
+    int N;
+
+    while (true)
+    {
+        cout << "Enter x(> 0 and < 1): ";
+        cin >> x;
+        if (x > 1 || x < -1)
+        {
+            cout << "Try again" << endl;
+        }
+        else
+        {
+            break;
+        }
+    }
+
+    double result = 1;
+
+    cout << "Enter N(> 0): ";
+    cin >> N;
+
+    for (int i = 1; i <= N; i++)
+    {
+        result += pow((-1), (i - 1)) * (CalculateCoefficientX(i) * pow(x, i)) / CalculateDenominator(i);
+    }
+
+    cout << "Result = " << result << endl;
+}
