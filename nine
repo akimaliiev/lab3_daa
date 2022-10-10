@@ -1,1 +1,15 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n,a,b;
+    float h;
+    cin>>n>>a>>b;
+    h=float(b-a)/float(n);
+    for(float i=float(a);i<=b;i+=h){
+        cout<<i<<" ";
+    }
+}
 
