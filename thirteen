@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int f1 = 1;
+    int f2 = 1;
+    int N;
+
+    cout << "Enter N(> 0): ";
+    cin >> N;
+
+    double result;
+    int nextNumber;
+    // cout << a0 << ", ";
+    cout << f1 << ", " << f2 << ", ";
+
+    for (int i = 1; i <= N; i++)
+    {
+        nextNumber = f1 + f2;
+        f1 = f2;
+        f2 = nextNumber;
+
+        cout << nextNumber << ", ";
+    }
+    cout << endl;
+}
