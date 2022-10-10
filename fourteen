@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    double a1 = 1;
+    double a2 = 2;
+    double N;
+
+    cout << "Enter N(> 1): ";
+    cin >> N;
+
+    double nextNumber;
+    cout << a1 << ", " << a2 << ", ";
+
+    for (int i = 1; i <= N; i++)
+    {
+        nextNumber = (a1 + (2 * a2)) / 3;
+        a1 = a2;
+        a2 = nextNumber;
+
+        cout << nextNumber << ", ";
+    }
+    cout << endl;
+}
