@@ -2,6 +2,7 @@
 #include <cmath>
 
 using namespace std;
+float Sin(int x){
     return 1.0 - float(sin(x));
 }
 int main()
@@ -10,10 +11,9 @@ int main()
     float h;
     cin>>n>>a>>b;
     
-float Sin(int x){
+
 h=float(b-a)/float(n);
     for(float i=float(a);i<=b;i+=h){
         cout<<Sin(i)<<" ";
     }
 }
-
